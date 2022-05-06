@@ -1,0 +1,92 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0px;
+    border: 0px;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr);
+    grid-template-areas: "card card card";
+    background-color: var(--light-gray);
+}
+
+.card {
+    grid-area: card;
+    background-color: white;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "header header header header" "main-content main-content footer footer";
+    padding-left: 0px;
+    padding-right: opx;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    padding: 2em;
+    padding-bottom: 3em;
+    align-items: space-evenly;
+    line-height: 3em;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    grid-area: main-content;
+    background-color: var(--cyan);
+    padding: 2em;
+    line-height: 3em;
+    color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--cyan);
+    opacity: 70%;
+    color: white;
+    padding: 2em;
+}
+
+button {
+    padding: 1em;
+    border-radius: 8px;
+    background-color: var(--bright-yellow);
+    color: white;
+}
+
+.footer h3 {
+    padding-bottom: 2em;
+}
+
+.number {
+    font-size: 30px;
+}
+
+.emphesis {
+    color: var(--bright-yellow);
+}
+
+h1 {
+    color: var(--cyan);
+} 
